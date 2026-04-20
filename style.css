@@ -78,3 +78,7 @@ footer{padding:3rem;border-top:1px solid rgba(111,180,194,.12)}
 /* Footer tagline con contraste corregido (era 2.43:1, ahora >4.5:1) */
 .footer-tagline{font-family:var(--sans);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#aad8d3;opacity:1}
 @media(max-width:768px){nav{padding:1.2rem 1.5rem}.step{grid-template-columns:40px 1fr;gap:0}.step:nth-child(odd) .step-text,.step:nth-child(even) .step-text{grid-column:2;text-align:left;padding:.25rem 0 1.5rem}.step:nth-child(odd) .step-center,.step:nth-child(even) .step-center{grid-column:1;grid-row:1}.step:nth-child(odd) .step-text,.step:nth-child(even) .step-text{grid-row:1}.step-empty{display:none!important}.step-desc,.step:nth-child(odd) .step-desc{margin-left:0;max-width:100%}footer{flex-direction:column;text-align:center}}
+
+.footer-social{display:flex;gap:1.5rem;align-items:center}
+.footer-social__link{font-family:var(--sans);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:#aad8d3;opacity:.8;text-decoration:none;transition:opacity .3s}
+.footer-social__link:hover{opacity:1}
