@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Primary -->
-    <title>Fluvian | Agua de Vertiente Natural · Yungay, Región de Ñuble, Chile</title>
-    <meta name="description" content="Fluvian es agua de vertiente natural nacida en Yungay, Región de Ñuble, donde el bosque esclerófilo del norte y la selva valdiviana del sur se encuentran. Pureza preservada en su lugar de nacimiento.">
-    <meta name="keywords" content="agua de vertiente, agua natural Chile, Fluvian, Yungay, Región de Ñuble, agua pura, agua premium Chile, agua embotellada origen, agua mineral Chile">
+    <!-- SEO Primary (≤65 chars) -->
+    <title>Fluvian | Agua de Vertiente · Yungay, Ñuble, Chile</title>
+    <meta name="description" content="Agua de vertiente natural entre dos bosques, Yungay, Región de Ñuble. Filtrada en suelos volcánicos y bosque nativo. Embotellada en su origen.">
+    <meta name="keywords" content="agua de vertiente, agua natural Chile, Fluvian, Yungay, Región de Ñuble, agua pura, agua premium Chile, agua embotellada origen, selva valdiviana, bosque esclerófilo">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://fluvian.cl/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Fluvian | Agua de Vertiente Natural · Yungay, Chile">
+    <meta property="og:title" content="Fluvian | Agua de Vertiente · Yungay, Chile">
     <meta property="og:description" content="Agua de vertiente natural nacida donde el bosque esclerófilo y la selva valdiviana se encuentran. Embotellada en su lugar de nacimiento en Yungay, Región de Ñuble.">
     <meta property="og:url" content="https://fluvian.cl/">
-    <meta property="og:image" content="https://fluvian.cl/fluvian-logo.svg">
+    <meta property="og:image" content="https://fluvian.cl/og-fluvian.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Fluvian – Agua de Vertiente Natural, Yungay, Región de Ñuble, Chile">
     <meta property="og:locale" content="es_CL">
     <meta property="og:site_name" content="Fluvian">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Fluvian | Agua de Vertiente Natural · Yungay, Chile">
+    <meta name="twitter:site" content="@fluvian_cl">
+    <meta name="twitter:title" content="Fluvian | Agua de Vertiente · Yungay, Chile">
     <meta name="twitter:description" content="Agua de vertiente natural nacida donde el bosque esclerófilo y la selva valdiviana se encuentran. Embotellada en Yungay, Región de Ñuble.">
-    <meta name="twitter:image" content="https://fluvian.cl/fluvian-logo.svg">
+    <meta name="twitter:image" content="https://fluvian.cl/og-fluvian.webp">
+    <meta name="twitter:image:alt" content="Fluvian – Agua de Vertiente Natural, Yungay, Chile">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="/fluvian-favicon.webp">
+    <link rel="apple-touch-icon" href="/fluvian-favicon.webp">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,29 +44,76 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <!-- Structured Data -->
+    <!-- Google Analytics (reemplaza G-XXXXXXXXXX con tu ID real) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- Structured Data – Organization + Product -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Fluvian Agua de Vertiente",
-      "description": "Agua de vertiente natural embotellada en Yungay, Región de Ñuble, Chile, donde el bosque esclerófilo del norte y la selva valdiviana del sur se encuentran.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Fluvian"
-      },
-      "manufacturer": {
-        "@type": "Organization",
-        "name": "Fluvian",
-        "url": "https://fluvian.cl",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Yungay",
-          "addressRegion": "Región de Ñuble",
-          "addressCountry": "CL"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://fluvian.cl/#organization",
+          "name": "Fluvian",
+          "url": "https://fluvian.cl",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://fluvian.cl/fluvian-logo.svg"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Yungay",
+            "addressRegion": "Región de Ñuble",
+            "addressCountry": "CL"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "contacto@fluvian.cl"
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "Product",
+          "name": "Fluvian Agua de Vertiente",
+          "description": "Agua de vertiente natural embotellada en Yungay, Región de Ñuble, Chile, donde el bosque esclerófilo del norte y la selva valdiviana del sur se encuentran.",
+          "image": "https://fluvian.cl/og-fluvian.webp",
+          "brand": {
+            "@type": "Brand",
+            "name": "Fluvian"
+          },
+          "manufacturer": {
+            "@id": "https://fluvian.cl/#organization"
+          },
+          "url": "https://fluvian.cl",
+          "offers": {
+            "@type": "Offer",
+            "availability": "https://schema.org/InStoreOnly",
+            "priceCurrency": "CLP",
+            "seller": {
+              "@id": "https://fluvian.cl/#organization"
+            }
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://fluvian.cl/#website",
+          "url": "https://fluvian.cl",
+          "name": "Fluvian",
+          "description": "Agua de vertiente natural nacida donde dos bosques se encuentran, Yungay, Región de Ñuble, Chile.",
+          "publisher": {
+            "@id": "https://fluvian.cl/#organization"
+          },
+          "inLanguage": "es-CL"
         }
-      },
-      "url": "https://fluvian.cl"
+      ]
     }
     </script>
 </head>
@@ -66,7 +122,7 @@
     <!-- NAV -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" aria-label="Navegación principal">
         <div class="container-fluid px-4">
-            <a class="navbar-brand" href="#" aria-label="Fluvian – Ir al inicio"><img src="fluvian.svg" alt="Fluvian" width="140" height="20"></a>
+            <a class="navbar-brand" href="#" aria-label="Fluvian – Ir al inicio"><img src="fluvian.svg" alt="Fluvian" width="140" height="20" loading="eager"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
                 <span class="navbar-toggler-icon"></span>
@@ -90,7 +146,7 @@
         <div class="hero-content">
             <span class="hero-label">Agua de Vertiente · Región de Ñuble · Chile</span>
             <h1>
-                <img src="fluvian-logo.svg" width="280" height="131"
+                <img src="fluvian-logo.svg" width="280" height="131" loading="eager"
                     alt="Fluvian – Agua de Vertiente Natural, Yungay, Región de Ñuble, Chile">
             </h1>
             <p class="hero-sub">Donde dos bosques se encuentran</p>
@@ -109,9 +165,9 @@
                     <p class="body-text mt-3">Allí, en el corazón verde de ese territorio, el agua de la lluvia y los deshielos comienza un viaje silencioso bajo la tierra: se filtra gota a gota a través de rocas, suelos volcánicos y raíces de bosques nativos, en un proceso que toma años de paciencia y equilibrio. Cuando esa agua vuelve a la superficie, emerge como una vertiente de extraordinaria pureza. Esa vertiente es Fluvian.</p>
                 </div>
                 <div class="reveal col-md-4 mt-4 mt-md-0">
-                    <img src="botella-agua.png"
+                    <img src="botella-agua.png" width="400" height="600"
                         alt="Botella de agua Fluvian – vertiente natural de Yungay, Región de Ñuble"
-                        class="img-fluid">
+                        class="img-fluid" loading="lazy">
                 </div>
             </div>
         </div>
@@ -124,9 +180,8 @@
                 <span class="section-num d-block mb-3">02 — El viaje del agua</span>
                 <h2 id="viaje-titulo" class="section-title mx-auto" style="max-width:700px;">
                   Años de espera para una <em>pureza extraordinaria.</em>
+                </h2>
             </div>
-            
-
 
             <div class="journey-steps">
 
@@ -196,28 +251,25 @@
     <!-- VERTIENTE -->
     <section id="vertiente" aria-label="Declaración de marca"
         style="background-image: url(bg-section.png); background-attachment: fixed; background-size: cover; position:relative">
-       
-      <div class="vertiente-overlay" aria-hidden="true"></div>
+        <div class="vertiente-overlay" aria-hidden="true"></div>
         <div class="container text-center">
             <p class="statement reveal">
-          
                Es agua con <em>historia</em>,<br>con <em>territorio</em>, con <em>tiempo</em>.
             </p>
-      
         </div>
     </section>
 
     <!-- TERRITORIO -->
-    <section id="territorio" aria-labelledby="territorio-titulo" >
+    <section id="territorio" aria-labelledby="territorio-titulo">
         <div class="container">
             <div class="row g-5 align-items-start">
                 <div class="reveal col-md-6">
                     <span class="section-num">03 — El territorio</span>
-                    <h2 id="territorio-titulo" class="section-title" >Ñuble,<br><em >la región que conserva</em></h2>
-                    <div class="quote-block" >
-                        <p >\"Un territorio que conserva una de las riquezas más valiosas de la naturaleza: agua pura embotellada en su origen.\"</p>
+                    <h2 id="territorio-titulo" class="section-title">Ñuble,<br><em>la región que conserva</em></h2>
+                    <div class="quote-block">
+                        <p>"Un territorio que conserva una de las riquezas más valiosas de la naturaleza: agua pura embotellada en su origen."</p>
                     </div>
-                    <p class="body-text" >Yungay es el lugar donde el bosque esclerófilo del norte y la selva valdiviana del sur se encuentran. Un corredor biológico único, protegido por bosques nativos y suelos volcánicos que hacen posible esta agua.</p>
+                    <p class="body-text">Yungay es el lugar donde el bosque esclerófilo del norte y la selva valdiviana del sur se encuentran. Un corredor biológico único, protegido por bosques nativos y suelos volcánicos que hacen posible esta agua.</p>
                     <p class="body-text mt-3">En un mundo que valora cada vez más lo natural, lo auténtico y lo trazable, <strong class="text-frost">Fluvian</strong> representa algo más profundo. Y por eso no solo embotella: cuida activamente el ecosistema que la hace posible.</p>
                 </div>
                 <div class="reveal col-md-6 d-flex flex-column gap-4" style="transition-delay: 0.2s;">
@@ -247,7 +299,7 @@
     </section>
 
     <!-- ETIMOLOGÍA -->
-    <section id="etimologia" aria-label="Etimología de Fluvian" style="background-image: lin;">
+    <section id="etimologia" aria-label="Etimología de Fluvian">
         <div class="container text-center">
             <div class="reveal">
                 <p class="etim-latin">Del latín</p>
@@ -276,16 +328,10 @@
                 <h2 class="cta-title">¿Quieres conocer Fluvian?</h2>
                 <p class="cta-sub">Distribución · Inversión · Prensa</p>
                 <div class="d-flex flex-wrap gap-3 justify-content-center">
-                    <a href="mailto:contacto@fluvian.cl"
-                        class="cta-btn">Escríbenos</a>
+                    <a href="mailto:contacto@fluvian.cl" class="cta-btn">Escríbenos</a>
                     <a href="#origen" class="cta-btn cta-btn--secondary">Descubrir el origen</a>
                 </div>
-                           <p class="contact-alt mt-4">
-  O escríbenos a
-  <a style="color:white" href="mailto:contacto@fluvian.cl" class="">contacto@fluvian.cl</a>
-</p>
             </div>
- 
         </div>
     </section>
 
@@ -295,7 +341,6 @@
         <span class="footer-tagline">Agua de Vertiente · Donde dos bosques se encuentran</span>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         // Scroll reveal
         const reveals = document.querySelectorAll('.reveal');
